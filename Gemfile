@@ -5,6 +5,9 @@ ruby '~>2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
+gem 'image_processing', '~>1.9.3'
+gem 'mini_magick', '~>4.9.5'
+gem 'active_storage_validations', '~>0.8.9'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
@@ -58,6 +61,10 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
   gem 'rails-controller-testing'
+end
+
+group :production do
+  gem 'aws-sdk-s3', '~>1.46.0', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
